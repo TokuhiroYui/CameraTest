@@ -56,8 +56,6 @@
 {
     // 撮影画像を取得
     self.imagePicture.image = (UIImage *) [info objectForKey:UIImagePickerControllerOriginalImage];
-
-    
     
     // カメラUIを閉じる
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -84,21 +82,22 @@
         // 比率計算
         float widthScale = self.imagePicture.frame.size.width /self.imagePicture.image.size.width;
         float heightScale = self.imagePicture.frame.size.height /self.imagePicture.image.size.height;
-        // 眼鏡画像のxとy、widthとheightのサイズを比率似合わせて変更
+        // 画像のxとy、widthとheightのサイズを比率似合わせて変更
         faceRect.origin.x *= widthScale;
         faceRect.origin.y *= heightScale;
         faceRect.size.width *= widthScale;
         faceRect.size.height *= heightScale;
         
-        // 眼鏡のUIImageViewを作成
+        // UIImageViewを作成
+#warning あとでpng画像に変更する
         UIImage *kImage = [UIImage imageNamed:@"kaeru.jpg"];
         UIImageView *kImageView = [[UIImageView alloc]initWithImage:kImage];
         kImageView.contentMode = UIViewContentModeScaleAspectFit;
         
-        // 眼鏡画像のリサイズ
+        // 画像のリサイズ
         kImageView.frame = faceRect;
         
-        // 眼鏡レイヤを撮影した写真に重ねる
+        // レイヤを撮影した写真に重ねる
         [self.imagePicture addSubview:kImageView];
     }
 }
@@ -121,19 +120,20 @@
     }
 }
 
-- (IBAction)doSave:(id)sender {
-    UIImageWriteToSavedPhotosAlbum(self.imagePicture.image, self,@selector(savingImageIsFinished:didFinishSavingWithError:contextInfo:), nil);
-}
-
--(void)savingImageIsFinished:(UIImage*)image
-    didFinishSavingWithError:(NSError*)error contextInfo:(void*)contextInfo{
-    
-        // Alertを表示する
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
-                                      message:@"アルバムへ保存しました" delegate:nil
-                            cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-        [alert show];
-    
-}
+//保存のところはあとで追加
+//- (IBAction)doSave:(id)sender {
+//    UIImageWriteToSavedPhotosAlbum(self.imagePicture.image, self,@selector(savingImageIsFinished:didFinishSavingWithError:contextInfo:), nil);
+//}
+//
+//-(void)savingImageIsFinished:(UIImage*)image
+//    didFinishSavingWithError:(NSError*)error contextInfo:(void*)contextInfo{
+//    
+//        // Alertを表示する
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+//                                      message:@"アルバムへ保存しました" delegate:nil
+//                            cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+//        [alert show];
+//    
+//}
 
 @end
