@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA5D48531B5A3E7C002363FD /* kaeru.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA5D48521B5A3E7C002363FD /* kaeru.jpg */; };
+		FA86D3DF1B5BF53B0085932A /* kaeru.png in Resources */ = {isa = PBXBuildFile; fileRef = FA86D3DE1B5BF53B0085932A /* kaeru.png */; };
 		FA9B17B41B552D0200C9DF07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9B17B31B552D0200C9DF07 /* main.m */; };
 		FA9B17B71B552D0200C9DF07 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9B17B61B552D0200C9DF07 /* AppDelegate.m */; };
 		FA9B17BA1B552D0200C9DF07 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9B17B91B552D0200C9DF07 /* ViewController.m */; };
@@ -29,7 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FA5D48521B5A3E7C002363FD /* kaeru.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kaeru.jpg; sourceTree = "<group>"; };
+		FA86D3DE1B5BF53B0085932A /* kaeru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kaeru.png; sourceTree = "<group>"; };
 		FA9B17AE1B552D0200C9DF07 /* CameraTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA9B17B21B552D0200C9DF07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA9B17B31B552D0200C9DF07 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 		FA9B17B01B552D0200C9DF07 /* CameraTest */ = {
 			isa = PBXGroup;
 			children = (
-				FA5D48521B5A3E7C002363FD /* kaeru.jpg */,
+				FA86D3DE1B5BF53B0085932A /* kaeru.png */,
 				FA9B17B51B552D0200C9DF07 /* AppDelegate.h */,
 				FA9B17B61B552D0200C9DF07 /* AppDelegate.m */,
 				FA9B17B81B552D0200C9DF07 /* ViewController.h */,
@@ -206,7 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA5D48531B5A3E7C002363FD /* kaeru.jpg in Resources */,
+				FA86D3DF1B5BF53B0085932A /* kaeru.png in Resources */,
 				FA9B17BD1B552D0200C9DF07 /* Main.storyboard in Resources */,
 				FA9B17C21B552D0200C9DF07 /* LaunchScreen.xib in Resources */,
 				FA9B17BF1B552D0200C9DF07 /* Images.xcassets in Resources */,

@@ -17,9 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-
-   
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -30,11 +27,6 @@
 
 
 -(IBAction)doCamera:(id)sender {
-    
-    // ２枚目以降のときのためにカエル画像を消す
-    for (UIView *view in [self.imagePicture subviews]) {
-        [view removeFromSuperview];
-    }
     
     UIImagePickerControllerSourceType sourceType;
     sourceType = UIImagePickerControllerSourceTypeCamera;
@@ -67,6 +59,11 @@
 
 - (void)drawMeganeImage:(CIFaceFeature *)faceFeature
 {
+    // ２枚目以降のときのためにカエル画像を消す
+    for (UIView *view in [self.imagePicture subviews]) {
+        [view removeFromSuperview];
+    }
+    
     if (faceFeature.hasLeftEyePosition && faceFeature.hasRightEyePosition && faceFeature.hasMouthPosition) {
         
         // 顔のサイズ情報を取得
@@ -89,8 +86,7 @@
         faceRect.size.height *= heightScale;
         
         // UIImageViewを作成
-#warning あとでpng画像に変更する
-        UIImage *kImage = [UIImage imageNamed:@"kaeru.jpg"];
+        UIImage *kImage = [UIImage imageNamed:@"kaeru.png"];
         UIImageView *kImageView = [[UIImageView alloc]initWithImage:kImage];
         kImageView.contentMode = UIViewContentModeScaleAspectFit;
         
@@ -115,7 +111,7 @@
     
     // 検出されたデータを取得
     for (CIFaceFeature *faceFeature in array) {
-        // 眼鏡画像追加処理へ
+        // 画像追加処理へ
         [self drawMeganeImage:faceFeature];
     }
 }
